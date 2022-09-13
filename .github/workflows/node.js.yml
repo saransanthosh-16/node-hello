@@ -27,7 +27,8 @@ jobs:
 
     - name: test
       run: npm run
-    - run: npm test index.js
+    - name: run superlinter
+      uses: github/super-linter@v3
   
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
