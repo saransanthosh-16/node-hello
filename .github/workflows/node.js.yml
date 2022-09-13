@@ -27,8 +27,7 @@ jobs:
 
     - name: test
       run: npm run
-    - run: npm run build test
-    - run: npm test  
+    - run: npm test --if-present 
   
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
