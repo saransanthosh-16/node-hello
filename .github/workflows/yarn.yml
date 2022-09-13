@@ -1,4 +1,15 @@
-steps:
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-lateststeps:
 - uses: actions/checkout@v3
 - uses: actions/setup-node@v3
   with:
